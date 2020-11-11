@@ -3,16 +3,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center_horizontal"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".ui.fragment.PlayerDetailsFragment">
+    tools:context=".ui.fragment.DevInfoFragment">
 
     <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/ivPlayerImage"
+        android:id="@+id/ivDevImage"
         android:layout_width="200dp"
         android:layout_height="200dp"
         app:civ_border_width="2dp"
         app:civ_border_color="#FF000000"
+        android:scaleType="centerCrop"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="100dp"/>
 
@@ -20,45 +20,36 @@
         android:id="@+id/tvName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Player Name"
+        android:text="Dev Name"
         android:layout_marginTop="8dp"
         android:textColor="@android:color/black"
         android:textSize="18sp"
         android:textStyle="bold|italic"
-        android:layout_below="@+id/ivPlayerImage"
+        android:layout_below="@+id/ivDevImage"
         android:layout_centerHorizontal="true"/>
 
     <TextView
-        android:id="@+id/tvCountry"
+        android:id="@+id/tvDevSkills"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Country"
+        android:text="Dev Skills"
+        android:gravity="center"
         android:layout_marginTop="2dp"
         android:textColor="@android:color/black"
         android:textSize="14sp"
         android:layout_below="@+id/tvName"
         android:layout_centerHorizontal="true"/>
 
-    <TextView
-        android:id="@+id/tvClubName"
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnDevInfo"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Club Name"
-        android:layout_marginTop="2dp"
-        android:textColor="@android:color/black"
-        android:textSize="14sp"
-        android:layout_below="@+id/tvCountry"
-        android:layout_centerHorizontal="true"/>
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:layout_centerInParent="true"
+        android:layout_below="@+id/tvDevSkills"
+        android:backgroundTint="@color/colorPrimary"
+        android:text="Edit Dev Info"
+        android:textColor="@color/design_default_color_background" />
 
-    <TextView
-        android:id="@+id/tvPlayerPosition"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Position"
-        android:layout_marginTop="2dp"
-        android:textColor="@android:color/black"
-        android:textSize="14sp"
-        android:layout_below="@+id/tvClubName"
-        android:layout_centerHorizontal="true"/>
 
 </RelativeLayout>

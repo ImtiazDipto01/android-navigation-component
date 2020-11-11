@@ -10,7 +10,7 @@ import com.imtiaz.mynavigationcomponent.databinding.ItemPlayerBinding
 
 class PlayerListAdapter(
     val context: Context,
-    var playerList: List<Player>,
+    private var playerList: List<Player>,
     val onClick: (Int) -> Unit
 ) :
     RecyclerView.Adapter<PlayerListAdapter.MyViewHolder>() {
@@ -20,29 +20,19 @@ class PlayerListAdapter(
 
     override fun getItemCount(): Int = playerList.size
 
-    override fun onBindViewHolder(holder: MyViewHolder, position: Int) = holder.bind(
-        playerList.get(
-            position
-        )
-    )
+    override fun onBindViewHolder(holder: MyViewHolder, position: Int) =
+        holder.bind(playerList[position])
 
     inner class MyViewHolder(binding: ItemPlayerBinding) : RecyclerView.ViewHolder(binding.root) {
 
-        private val _binding: ItemPlayerBinding
+        private val _binding: ItemPlayerBinding = binding
 
-        init {
-            _binding = binding
-        }
-
-        fun bind(player: Player){
-
+        fun bind(player: Player) {
             _binding.apply {
-
                 val resID: Int = context.resources.getIdentifier(
                     player.drawable,
                     "drawable", context.packageName
                 )
-
                 val drawable = ContextCompat.getDrawable(context, resID)
                 ivGallery.setImageDrawable(drawable)
             }

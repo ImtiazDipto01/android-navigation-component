@@ -20,7 +20,7 @@ val playerList = listOf<Player>(
     Player(11, "Ramos", "Spain", "Real Madrid", "CB", "ramos", DEFENDER),
     Player(12, "Koulibaly", "Senegalese", "Napoli", "CB", "koulibali", DEFENDER),
     Player(13, "Laporte", "France", "Man City", "CB", "laporte", DEFENDER),
-    Player(14, "Van dijk", "Netherland", "Liverpool", "CB", "van", DEFENDER),
+    Player(14, "Van dijk", "Netherlands", "Liverpool", "CB", "van", DEFENDER),
     Player(15, "Alaba", "Austria", "Bayern Munchen", "RB", "alaba", DEFENDER),
     Player(16, "Alba", "Spain", "Barcelona", "LB", "alba", DEFENDER),
     Player(17, "Kimmich", "Germany", "Bayern Munchen", "RB", "kimmich", DEFENDER),

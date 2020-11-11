@@ -18,7 +18,11 @@ class MidfielderFragment : Fragment() {
         super.onCreate(savedInstanceState)
     }
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
         _binding = FragmentMidfielderBinding.inflate(inflater)
         return _binding.root
     }
@@ -27,7 +31,7 @@ class MidfielderFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         _binding.rvPlayerList.apply {
-            adapter = PlayerListAdapter(requireContext(), getPlayerListByPositionKey(MIDFIELDER)){}
+            adapter = PlayerListAdapter(requireContext(), getPlayerListByPositionKey(MIDFIELDER)) {}
         }
     }
 }

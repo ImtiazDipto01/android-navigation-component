@@ -6,12 +6,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.imtiaz.mynavigationcomponent.R
-import com.imtiaz.mynavigationcomponent.databinding.FragmentForwardBinding
-import com.imtiaz.mynavigationcomponent.databinding.FragmentPlayerDetailsBinding
+import com.imtiaz.mynavigationcomponent.databinding.FragmentEditDevInfoBinding
 
-class PlayerDetailsFragment : Fragment() {
+class EditDevInfoFragment : Fragment() {
 
-    private lateinit var _binding: FragmentPlayerDetailsBinding
+    private lateinit var _binding: FragmentEditDevInfoBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -22,7 +21,7 @@ class PlayerDetailsFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        _binding = FragmentPlayerDetailsBinding.inflate(inflater)
+        _binding = FragmentEditDevInfoBinding.inflate(inflater)
         return _binding.root
     }
 }

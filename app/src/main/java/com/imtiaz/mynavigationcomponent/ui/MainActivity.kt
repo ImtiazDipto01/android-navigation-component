@@ -4,7 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.imtiaz.mynavigationcomponent.R
 import com.imtiaz.mynavigationcomponent.databinding.ActivityMainBinding
-import com.imtiaz.mynavigationcomponent.ui.fragment.MidfielderFragment
+import com.imtiaz.mynavigationcomponent.ui.fragment.EditDevInfoFragment
 
 class MainActivity : AppCompatActivity() {
 
@@ -21,7 +21,7 @@ class MainActivity : AppCompatActivity() {
     private fun initFragment(){
         val fragmentTag = "DefenderFragment"
         supportFragmentManager.beginTransaction()
-            .add(R.id.container, MidfielderFragment(), fragmentTag)
+            .add(R.id.container, EditDevInfoFragment(), fragmentTag)
             .commit()
     }
 }
